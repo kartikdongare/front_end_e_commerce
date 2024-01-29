@@ -1,0 +1,181 @@
+.main-select-admin-cust{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    height: 675px;
+    /* height: 100%; */
+    width: 100%;
+    position: relative;
+    background-image: url('/src/assets/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg');
+    background-repeat: no-repeat;
+    
+  }
+  .sub-select{
+    margin: 9rem 0;
+  padding: 8rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px blue;
+  color: blue;
+  } 
+  .select-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+
+  /* ----------login page -----------*/
+  .main-login{
+    /* border: 2px solid red; */
+    /* height: 650px; */
+    margin-top: 5rem;
+    
+  }
+  .sub-login{
+    width: 90%;
+    position: relative;
+    top: 15%;
+    left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  .login-page1{
+    width: 30%;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(225, 221, 221);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .seperate{
+    display: flex;
+  }
+  .sep-line{
+    border-bottom: 1px solid black;
+    width: 38%;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .login-page2{
+    background-image: url('/src/assets/cherry-667.png');
+    /* width: 60%; */
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .login-page2{
+    animation: move 2s infinite ease alternate;
+  }
+  @keyframes move{
+    from{
+        transform: translateY(-15px);
+    }
+    to{
+        transform: translateY(0px) scale(1.03);
+    }
+  }
+
+  /* -------------------sign up------------------ */
+  .main-sign-up{
+    width: 30%;
+    margin:4rem auto ;
+    /* border: 2px solid black; */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(232, 228, 228);
+  }
+  .sub-sign-up{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  @media screen  and (min-width:320px) and ( max-width:600px){
+
+    .sub-select{
+      padding: 1rem;
+      margin: 2rem;
+    }
+    /* login page */
+    .main-login{
+      margin: 1rem 0;
+    }
+    .login-page2{
+      height: 200px;
+      width: 200px;
+    }
+    .sub-login{
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+    }
+    .login-page1{
+      width: 60%;
+    }
+    .sep-line{
+      width: 25%;
+    }
+    .buttons{
+      row-gap: 1rem;
+    }
+
+    /* sign up */
+    .main-sign-up{
+      width: 80%;
+    }
+  }
+
+  @media screen  and (min-width:601px) and ( max-width:900px){
+    .sub-select{
+      padding: 5rem;
+      margin: 2rem;
+    }
+    .login-page2{
+      height: 300px;
+      width: 300px;
+    }
+    .sub-login{
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+    }
+    .login-page1{
+      width: 60%;
+    }
+    .sep-line{
+      width: 35%;
+    }
+   
+    
+    /* sign up */
+    .main-sign-up{
+      width: 60%;
+    }
+  }
+
+  @media screen  and (min-width:901px) and ( max-width:1200px){
+    .login-page2{
+      height: 350px;
+      width: 350px;
+    }
+    .login-page1{
+      width: 50%;
+    }
+   
+    /* sign up */
+    .main-sign-up{
+      width: 40%;
+    }
+  }
