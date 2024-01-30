@@ -2,7 +2,7 @@ import { Box, Button, Checkbox, FormControlLabel, TextField, Typography } from '
 import React, { ChangeEvent, SyntheticEvent } from 'react'
 import FormControl from '@mui/material/FormControl';
 import {FormData} from '../../dataTypes'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import { Formik } from 'formik';
 // import { formValidation } from '../../validation';
 
@@ -81,8 +81,8 @@ const SingUp = () => {
         />
         <FormControlLabel required  control={<Checkbox />}  label="Required" onChange={handleChange1} name='check'/>
         <Box sx={{display:'flex',justifyContent:'space-between',flexWrap:'wrap'}}>
-        <Button variant="contained">Sign Up</Button>
-        <Button variant="outlined" onClick={()=>navTo('/login')}>Sign In</Button>
+        <Link to={'/home'}> <Button variant="contained">Sign Up</Button></Link>
+        <Button variant="outlined" onClick={()=>navTo('/login')}>Login</Button>
         </Box>
         {/* </Formik> */}
       </FormControl>

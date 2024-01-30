@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-
+    
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
     const handleMouseDownPassword = (event: MouseEvent<HTMLButtonElement>) => {
@@ -84,7 +84,8 @@ const Login = () => {
                         />
                         Remember me
                     </Typography>
-                    <Button variant="contained">Login</Button>
+                    <Link to={'/home'}><Button variant="contained">Login</Button></Link>
+                    
                     <Box className='seperate'>
                         <Box className='sep-line'></Box>
                         <Typography>Log in With</Typography>
