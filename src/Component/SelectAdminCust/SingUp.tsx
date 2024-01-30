@@ -20,7 +20,7 @@ const SingUp = () => {
  
   return (
     <Box className='main-sign-up'>
-      <Typography variant='h5' mb={2} color={'red'}>Sign Up User</Typography>
+      <Typography variant='h5' mb={2} color={'red'}>Sign Up User Kartik</Typography>
       
       <FormControl fullWidth className='sub-sign-up'>
       {/* <Formik
