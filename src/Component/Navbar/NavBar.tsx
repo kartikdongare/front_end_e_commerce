@@ -8,14 +8,15 @@ const NavBar = () => {
     <div className='navbar'>
       <h1 className='logo'>LOGO</h1>
       <ul className={isMobile?'nav-links-mobile':'nav-links'} onClick={()=>setIsMobile(false)}>
-        
        <Link to={'/home'} className='home'><li>Home</li></Link> 
        <Link to={'/about'} className='about'><li>About</li></Link> 
        <Link to={'/product'} className='product'><li>Product</li></Link> 
        <Link to={'/contact'} className='contact'><li>Contact</li></Link> 
        <Link to={'#'} className='tolly'>
-        <li >
-            <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+        <li className='tolly'>
+            <i className="fa fa-shopping-cart" aria-hidden="true">
+             
+            </i>
             <div className='circle'>2</div>
         </li>
         </Link>

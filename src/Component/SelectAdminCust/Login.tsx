@@ -11,15 +11,20 @@ import Checkbox from '@mui/material/Checkbox';
 import GoogleIcon from '@mui/icons-material/Google';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { ChangeEvent, MouseEvent, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 // import {OnChangeTypes} from '../../dataTypes'
 
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-    
+    const {role}=useParams()
     const handleClickShowPassword = () => setShowPassword((show) => !show);
-
+    const [loginData,setLoginData]=useState({})
+    
+    const handleLoginData=(event: ChangeEvent<HTMLInputElement>)=>{
+        setLoginData({...loginData,[event.target.name]:event.target.value})
+    }
+    console.log({...loginData,role},'loginData')
     const handleMouseDownPassword = (event: MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     };
@@ -51,6 +56,8 @@ const Login = () => {
                         label="Enter email"
                         variant="outlined"
                         size="small"
+                        onChange={handleLoginData}
+                        name="email"
                     />
 
                     <FormControl variant="outlined" size="small" >
@@ -59,7 +66,9 @@ const Login = () => {
                         </InputLabel>
                         <OutlinedInput
                             id="outlined-adornment-password"
+                            name="password"
                             type={showPassword ? "text" : "password"}
+                            onChange={handleLoginData}
                             endAdornment={
                                 <InputAdornment position="end">
                                     <IconButton
@@ -84,7 +93,7 @@ const Login = () => {
                         />
                         Remember me
                     </Typography>
-                    <Link to={'/home'}><Button variant="contained">Login</Button></Link>
+                    <Link to={'/home'} style={{textAlign:'center'}}><Button variant="contained" fullWidth>Login</Button></Link>
                     
                     <Box className='seperate'>
                         <Box className='sep-line'></Box>

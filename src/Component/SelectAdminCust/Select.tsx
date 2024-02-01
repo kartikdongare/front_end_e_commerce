@@ -14,11 +14,11 @@ const Select = () => {
           <Button
             variant="outlined"
             sx={{ fontWeight: "bold" }}
-            onClick={() => navTo("/login")}
+            onClick={() => navTo("/sign-up/admin")}
           >
             Admin
           </Button>
-          <Button variant="outlined" sx={{ fontWeight: "bold" }} onClick={() => navTo("/sign-up")}>
+          <Button variant="outlined" sx={{ fontWeight: "bold" }} onClick={() => navTo("/sign-up/customer")}>
             Customer
           </Button>
         </Box>

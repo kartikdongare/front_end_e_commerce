@@ -19,8 +19,8 @@ const routing = () => {
             {!x && !y && !z && <NavBar/>}
             <Routes>
                 <Route path='/' element={<Select />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/sign-up' element={<SingUp />} />
+                <Route path='/login/:role' element={<Login />} />
+                <Route path='/sign-up/:role' element={<SingUp />} />
                 <Route path='/home' element={<Home />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/contact' element={<Contact />} />
